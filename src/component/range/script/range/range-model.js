@@ -121,7 +121,7 @@ class RangeModel {
   }
 
   _update () {
-    this._innerWidth = this._width - this._innerPadding;
+    this._innerWidth = Math.max(1, this._width - this._innerPadding);
     const ratio = this._getRatio(this._value);
     this._translateX = ratio * this._width;
     this._centerPercent = ratio * 100;
